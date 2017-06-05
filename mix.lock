@@ -1,1 +1,1 @@
-%{"yamerl": {:git, "https://github.com/yakaz/yamerl.git", "ae810a808817d9482b4628ae3e20d746e3729fe0", []}}
+%{"yamerl": {:hex, :yamerl, "0.4.0", "ae215b1242810a9bc07716b88062f1bfe06f6bc7cf68372091f630baa536df79", [:rebar3], []}}

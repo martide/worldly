@@ -27,7 +27,7 @@ defmodule Worldly.RegionTest do
 
     test "regions_for/1 for no nested regions", %{country_with_regions: country} do
       regions = Worldly.Region.regions_for(country)
-      assert regions == country_with_regions_data
+      assert regions == country_with_regions_data()
 
       r = regions |> List.first
       regions = Worldly.Region.regions_for(r)
@@ -36,11 +36,11 @@ defmodule Worldly.RegionTest do
 
     test "regions_for/1 with nested regions", %{country_with_nested_regions: country} do
       regions = Worldly.Region.regions_for(country)
-      assert regions == country_with_nested_regions_data
+      assert regions == country_with_nested_regions_data()
 
       r = regions |> List.first
       regions = Worldly.Region.regions_for(r)
-      assert regions == regions_for_albania_berat
+      assert regions == regions_for_albania_berat()
 
       r = regions |> List.first
       regions = Worldly.Region.regions_for(r)

@@ -3,21 +3,21 @@ defmodule Worldly.CountryTest do
 
   test "all/0" do
     assert Worldly.Country.all == [
-      country_andorra,
-      country_albania
+      country_andorra(),
+      country_albania()
     ]
   end
 
   test "with_name/1" do
-    assert Worldly.Country.with_name("Albania") == [country_albania]
+    assert Worldly.Country.with_name("Albania") == [country_albania()]
   end
 
   test "with_code/1 of length 2" do
-    assert Worldly.Country.with_code("AL") == [country_albania]
+    assert Worldly.Country.with_code("AL") == [country_albania()]
   end
 
   test "with_code/1 of length 3" do
-    assert Worldly.Country.with_code("ALB") == [country_albania]
+    assert Worldly.Country.with_code("ALB") == [country_albania()]
   end
 
   test "with_code/1 of length other than 2 or 3" do
@@ -27,7 +27,7 @@ defmodule Worldly.CountryTest do
   @tag :real_data
   test "real paths working" do
     Application.put_env(:worldly, :data_path, "priv/data")
-    assert Worldly.Country.with_code("AL") == [country_albania]
+    assert Worldly.Country.with_code("AL") == [country_albania()]
     Application.put_env(:worldly, :data_path, "priv/test_data")
   end
 
