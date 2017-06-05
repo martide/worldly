@@ -4,8 +4,12 @@ defmodule Worldly.Locale do
   alias Worldly.Region
 
   def locales_folder_path do
-    Application.get_env(:worldly, :data_path)
-    |> Path.join("locale")
+    file_path = Application.get_env(:worldly, :data_path) |> Path.join("locale")
+    if File.exists?(file_path) do
+      file_path
+    else
+      Path.join([Application.app_dir(:worldly, "priv"), "data/locale"])
+    end
   end
 
   def set_locale_data(model, type, locale_name\\'en')

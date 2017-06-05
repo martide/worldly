@@ -29,7 +29,7 @@ defmodule Worldly.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:yamerl, github: "yakaz/yamerl"}]
+    [{:yamerl, "~> 0.4.0"}]
   end
 
   defp package do

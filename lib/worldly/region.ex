@@ -6,7 +6,12 @@ defmodule Worldly.Region do
   alias Worldly.Region
 
   def region_data_files_path do
-    Application.get_env(:worldly, :data_path)
+    file_path = Application.get_env(:worldly, :data_path)
+    if File.exists?(file_path) do
+      file_path
+    else
+      Path.join([Application.app_dir(:worldly, "priv"), "data"])
+    end
   end
 
   def exists?(model) do

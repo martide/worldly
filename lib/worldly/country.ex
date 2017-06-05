@@ -2,8 +2,12 @@ defmodule Worldly.Country do
   defstruct name: "", alpha_3_code: "", alpha_2_code: "", has_regions: false, common_name: "", official_name: "", numeric_code: ""
 
   def countries_data_file_path do
-    Application.get_env(:worldly, :data_path)
-    |> Path.join("world.yml")
+    file_path = Application.get_env(:worldly, :data_path) |> Path.join("world.yml")
+    if File.exists?(file_path) do
+      file_path
+    else
+      Path.join([Application.app_dir(:worldly, "priv"), "data/world.yml"])
+    end
   end
 
   alias Worldly.Country
