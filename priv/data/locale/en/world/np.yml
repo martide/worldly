@@ -2,13 +2,17 @@
 en:
   world:
     np:
-      '1':
-        name: Madhyamanchal
-      '2':
-        name: Madhya Pashchimanchal
-      '3':
-        name: Pashchimanchal
-      '4':
-        name: Purwanchal
-      '5':
-        name: Sudur Pashchimanchal
+      "1":
+        name: Koshi
+      "2":
+        name: Madhesh
+      "3":
+        name: Bagmati
+      "4":
+        name: Gandaki
+      "5":
+        name: Lumbini
+      "6":
+        name: Karnali
+      "7":
+        name: Sudurpashchim

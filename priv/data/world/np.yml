@@ -1,11 +1,15 @@
 ---
-- code: '1'
-  type: development region
-- code: '2'
-  type: development region
-- code: '3'
-  type: development region
-- code: '4'
-  type: development region
-- code: '5'
-  type: development region
+- code: "1"
+  type: province
+- code: "2"
+  type: province
+- code: "3"
+  type: province
+- code: "4"
+  type: province
+- code: "5"
+  type: province
+- code: "6"
+  type: province
+- code: "7"
+  type: province
